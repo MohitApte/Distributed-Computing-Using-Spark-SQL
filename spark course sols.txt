@@ -1,0 +1,31 @@
+H​ow can Apache Spark fit into a data application? Include specific Spark functionalities that can be applied in a data application.
+
+	Apache Spark is an open source software that allows big data analysis through clusters.
+	Spark, which is coded in Scala, makes it possible to process data from data sources such as Hadoop Distributed File System, NoSQL databases, or relational data stores.
+	It has a huge role to play in big data application. 
+
+	The main spark functinalities which help in big data application include:
+	1. Distributed compution using partitions of data allows for extremely fast processing of big data.
+	2. The dataframe framework of driver node and executor nodes.
+	3. Adaptive Query execution (AQE)
+	4. Essential file formats such as parquet
+	5. Data lakehouses which are the best of both worlds (Data warehouse and lakes)
+
+W​hy is parallelism important and how does Spark parallelize tasks? Provide at least two specific examples for each.
+
+	Paralleism in big data processing is extrmely essential since it gives us faster processing ability.  
+	A task is parallelized in Spark using a driver Node and many executor nodes. How the task is split across these different nodes in the cluster depends on the types of data structures 	that you’re using. 
+
+	Examples of this are the following:
+	1. We used the fireCalls dataset in the course multiple times. We saw how we can split the counting of the number of entries into 8 different paritions and saw a live example of how 	spark parallizes tasks.
+	2. We used a groupby in our fireCalls dataset. This saw narrow and wide transofrmation which was a type of parallelism done by spark itself.
+
+3. W​hat is a DataFrame in Spark and how is it different from a SQL table? Provide at least two specific examples for each.
+
+	A Spark DataFrame is a distributed collection of daa organised into columns. 
+	It is an integrated data structure with an easy-to-use API for simplifying distributed big data processing.
+	A SQL table is a type of structured data which can be queried usid the SQL language
+	
+	Difference:
+	1. A SQL table stores data. Spark is NOT A DATABASE. IT is not for storage of data. DataFrame technology is used for distributed compute of the the data provided by a database.
+	2. A SQL table cannot have unstructured data such as images and videos. However, Spark dataframe can work with unstructured data as well.
